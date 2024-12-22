@@ -8,8 +8,11 @@ Hands on Java data structures and algorithms.
 
 ## Topics
 
-- Big O
+- Space complexity
+- Time complexity
+- Big O -> O(1), O(log n), O(n)
 - Classes
+- Pointers
 
 ## Data Structures
 
