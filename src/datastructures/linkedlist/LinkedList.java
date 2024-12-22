@@ -1,5 +1,11 @@
 package datastructures.linkedlist;
 
+/**
+ * Simple linked list.
+ * @head Head node
+ * @tail tail node
+ * @length: Length of the list
+ */
 public class LinkedList {
     private Node head;
     private Node tail;
