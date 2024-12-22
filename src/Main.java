@@ -1,5 +1,13 @@
+import datastructures.classes.Cookie;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        Cookie cookieOne = new Cookie("green");
+        Cookie cookieTwo = new Cookie("yellow");
+
+        cookieOne.setColor("blue");
+
+        System.out.println(cookieOne.getColor());
+        System.out.println(cookieTwo.getColor());
     }
 }
