@@ -1,4 +1,4 @@
-import datastructures.classes.Cookie;
+package datastructures.classes;
 
 public class Main {
     public static void main(String[] args) {
