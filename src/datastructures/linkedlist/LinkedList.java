@@ -1,5 +1,7 @@
 package datastructures.linkedlist;
 
+import java.util.Objects;
+
 /**
  * Simple linked list.
  *
@@ -58,5 +60,21 @@ public class LinkedList {
     }
 
     public void popNode() {
+        if (this.length == 0) { // here we have an empty linked list
+            System.out.println("Empty List");
+        } else {
+            var temp = this.head;
+            while (temp.next != null) { // trigger this loop only if there is at least two nodes
+                if (Objects.equals(temp.next.value, this.tail.value)) {
+                    this.tail = temp;
+                    temp.next = null;
+                    break;
+                }
+                temp = temp.next;
+            }
+            // in case of a single node - drop that node
+            this.head = null;
+            this.tail = null;
+        }
     }
 }
