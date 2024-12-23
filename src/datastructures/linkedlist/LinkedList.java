@@ -24,7 +24,8 @@ public class LinkedList {
     public void printList() {
         System.out.println("\nLinked List of " + this.length + " elements");
         var temp = this.head; // pass head to temporary variable
-        System.out.print("Head=(" + this.head.value + ") ");
+        if (this.head != null) System.out.print("Head=(" + this.head.value + ") ");
+        else System.out.print("Head=(null) ");
 
         while (temp != null) { // loop node to node
             System.out.print("(" + temp.value + ")->");
@@ -32,7 +33,8 @@ public class LinkedList {
         }
 
         System.out.print("null");
-        System.out.print(" Tail=(" + this.tail.value + ")\n");
+        if (this.tail != null) System.out.print(" Tail=(" + this.tail.value + ")\n");
+        else System.out.print(" Tail=(null) ");
     }
 
     public void getHead() {
@@ -60,21 +62,27 @@ public class LinkedList {
     }
 
     public void popNode() {
+        System.out.println("\nRemoving the last node.");
         if (this.length == 0) { // here we have an empty linked list
             System.out.println("Empty List");
         } else {
+            if (this.length == 1) {
+                // in case of a single node - drop that node
+                this.head = null;
+                this.tail = null;
+                this.length--;
+                return;
+            }
             var temp = this.head;
             while (temp.next != null) { // trigger this loop only if there is at least two nodes
                 if (Objects.equals(temp.next.value, this.tail.value)) {
                     this.tail = temp;
                     temp.next = null;
+                    this.length--;
                     break;
                 }
                 temp = temp.next;
             }
-            // in case of a single node - drop that node
-            this.head = null;
-            this.tail = null;
         }
     }
 }
