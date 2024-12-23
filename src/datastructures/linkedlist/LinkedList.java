@@ -85,4 +85,31 @@ public class LinkedList {
             }
         }
     }
+
+    /**
+     * This method remove the last node of a linked list.
+     * This method use two temporary variables (temp and prev) to navigate through the linked list.
+     *
+     * @return The removed Node{value, next}
+     */
+    public Node popLastNode() {
+        if (this.length == 0) return null;
+        var temp = this.head;
+        var prev = this.head;
+        while (temp.next != null) {
+            // getting out of this loop means that temp has reached the last node and prev is at the node before.
+            prev = temp;
+            temp = temp.next;
+        }
+        this.tail = prev;
+        this.tail.next = null;
+        this.length--;
+
+        if (this.length == 0) {
+            this.head = null;
+            this.tail = null;
+        }
+
+        return temp;
+    }
 }
