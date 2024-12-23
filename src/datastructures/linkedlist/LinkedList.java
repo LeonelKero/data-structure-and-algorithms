@@ -50,7 +50,7 @@ public class LinkedList {
     }
 
     public void appendNode(final Integer value) {
-        System.out.println("\nAdding node " + value);
+        System.out.println("\n=> Adding node with value " + value);
         final var newNode = new Node(value); // create new node to be appended
         if (this.length == 0) { // in case of first node append
             this.head = newNode;
@@ -62,7 +62,7 @@ public class LinkedList {
     }
 
     public void popNode() {
-        System.out.println("\nRemoving the last node.");
+        System.out.println("\n=> Removing the last node.");
         if (this.length == 0) { // here we have an empty linked list
             System.out.println("Empty List");
         } else {
