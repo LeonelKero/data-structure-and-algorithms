@@ -9,9 +9,14 @@ public class LinkedListMainApp {
         linkedList.getTail();
         linkedList.getLength();
 
-        //linkedList.printList();
+
+        linkedList.appendNode(8);
+        linkedList.printList();
 
         linkedList.appendNode(9);
+        linkedList.printList();
+
+        linkedList.popNode();
 
         linkedList.printList();
     }
