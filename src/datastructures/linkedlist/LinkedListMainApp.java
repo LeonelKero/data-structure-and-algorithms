@@ -1,6 +1,6 @@
 package datastructures.linkedlist;
 
-public class LinkedListMain {
+public class LinkedListMainApp {
     public static void main(String[] args) {
         final var linkedList = new LinkedList(7);
 
