@@ -118,7 +118,7 @@ public class LinkedList {
     /**
      * This method check cases as empty list, and many nodes inside the list.
      *
-     * @param value An integer representing the new node value
+     * @param value An integer representing the new node value.
      */
     public void prependNode(final Integer value) {
         System.out.println("\n=> Prepend new node with value " + value);
@@ -129,6 +129,24 @@ public class LinkedList {
             this.tail = newNode;
         } else {
             this.head.next = temp;
+        }
+        this.length++;
+    }
+
+    /**
+     * This is another implementation for prepending new node ahead
+     *
+     * @param value represents the value of the new node.
+     */
+    public void prepend(final Integer value) {
+        System.out.println("\n=> Prepend new node with value " + value);
+        final var newNode = new Node(value);
+        if (this.length == 0) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
         }
         this.length++;
     }
