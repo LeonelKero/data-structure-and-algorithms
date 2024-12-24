@@ -112,4 +112,21 @@ public class LinkedList {
 
         return temp;
     }
+
+    /**
+     * This method check cases as empty list, and many nodes inside the list.
+     *
+     * @param value An integer representing the new node value
+     */
+    public void prependNode(final Integer value) {
+        final var newNode = new Node(value);
+        final var temp = this.head;
+        this.head = newNode;
+        if (this.length == 0) {
+            this.tail = newNode;
+        } else {
+            this.head.next = temp;
+        }
+        this.length++;
+    }
 }
