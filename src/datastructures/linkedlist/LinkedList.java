@@ -15,6 +15,7 @@ public class LinkedList {
     private Integer length;
 
     LinkedList(final Integer value) {
+        // Todo: Handle null case
         Node node = new Node(value);
         this.head = node;
         this.tail = node;
