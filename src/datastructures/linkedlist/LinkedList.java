@@ -93,6 +93,7 @@ public class LinkedList {
      * @return The removed Node{value, next}
      */
     public Node popLastNode() {
+        System.out.println("\n=> Removing the last node and return it.");
         if (this.length == 0) return null;
         var temp = this.head;
         var prev = this.head;
@@ -119,6 +120,7 @@ public class LinkedList {
      * @param value An integer representing the new node value
      */
     public void prependNode(final Integer value) {
+        System.out.println("\n=> Prepend new node with value " + value);
         final var newNode = new Node(value);
         final var temp = this.head;
         this.head = newNode;
