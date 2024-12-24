@@ -19,5 +19,8 @@ public class LinkedListMainApp {
         linkedList.popNode();
 
         linkedList.printList();
+
+        linkedList.prependNode(5);
+        linkedList.printList();
     }
 }
