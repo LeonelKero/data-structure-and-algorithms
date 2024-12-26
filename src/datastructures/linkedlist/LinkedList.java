@@ -164,6 +164,7 @@ public class LinkedList {
             }else {
                 this.head = this.head.next;
             }
+            temp.next = null; // cut ties with the remaining part of the list
             this.length--;
             return temp;
         }
