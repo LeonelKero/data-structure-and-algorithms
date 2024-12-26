@@ -22,5 +22,9 @@ public class LinkedListMainApp {
 
         linkedList.prependNode(5);
         linkedList.printList();
+
+        Node removedNode = linkedList.removeFirstNode();
+        System.out.println("\tRemoved Node: " + removedNode.value);
+        linkedList.printList();
     }
 }

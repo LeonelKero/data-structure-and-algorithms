@@ -152,6 +152,7 @@ public class LinkedList {
     }
 
     public Node removeFirstNode() {
+        System.out.println("\n=> Removing the first node.");
         if (this.length == 0) {
             System.out.println("Empty List");
             return null;
