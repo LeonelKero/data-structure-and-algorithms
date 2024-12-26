@@ -150,4 +150,21 @@ public class LinkedList {
         }
         this.length++;
     }
+
+    public Node removeFirstNode() {
+        if (this.length == 0) {
+            System.out.println("Empty List");
+            return null;
+        }else {
+            final var temp = this.head;
+            if (this.length == 1) {
+                this.head = null;
+                this.tail = null;
+            }else {
+                this.head = this.head.next;
+            }
+            this.length--;
+            return temp;
+        }
+    }
 }
